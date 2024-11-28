@@ -1,0 +1,81 @@
+:root{
+    --pink: #f14e95;
+    --bg: #0a0a0a;
+    --shadow: 02px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+    font-size: 1.2 rem;
+    font-family: 'Work Sans' , sans-serif;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/oip.jpg);
+    background-position: 10% 0; /* Geser gambar ke kanan 10% */
+    background-size: cover; /* Pastikan gambar memenuhi area */
+    z-index: -1;
+    filter: grayscale();
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+}
+.hero h1, .hero h4, .hero p{
+    text-shadow: var(--shadow);
+}
+.hero h1 {
+    font-family: 'Italianno' , cursive;
+    font-size: 6rem;
+    color: black;
+}
+.hero h4 {
+    font-size: 1.6rem;
+}
+.hero p {
+    font-size: 1.4rem;
+
+}
+.hero a {
+    color: var(--pink);
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+.hero a:hover {
+    background-color: var(--pink);
+    color: white;
+
+}
+/* media query */
+/* leptop */
+@media (max-width:992px) {
+html{
+    font-size: 75%;
+}
+.simply-countdown > .simply-section {
+    padding: 70px;
+}
+/* tablet */
+@media (max-width:768px) {
+    html{
+        font-size: 65%;
+}
+.simply-countdown > .simply-section {
+    padding: 60px;
+    margin: 5px;
+}
+/* mobilephone */
+@media (max-width:576px) {
+    html{
+        font-size: 60%;
+}
+.simply-countdown > .simply-section {
+    padding: 45px;
+    margin: 3px;
+}
+}
